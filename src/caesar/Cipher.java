@@ -27,7 +27,7 @@ public class Cipher {
 		
 		for(int i =0; i < mesglength; i++){
 			if ((messageC[i] + shift) > ('Z')){
-				messageC[i] = (char)(shift - 25);
+				messageC[i] = (char)('Z' - messageC[i] + 'A');
 				System.out.println("New_messasgeC[i]: " + messageC[i]);
 				
 			}

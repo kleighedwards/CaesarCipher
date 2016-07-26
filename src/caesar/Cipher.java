@@ -11,12 +11,8 @@ public class Cipher {
 		int shift = 0;
 		
 		while(true){
-			System.out.println("Would you like to [E]ncrypt");
-			System.out.println("Would you like to [D]encrypt");
-			System.out.println("Would you like to [Q]uit");
-			menu = keyboard.next().toUpperCase().charAt(0);
 			
-			System.out.println("Please provide a messasge: ");
+			System.out.println("Please provide a message: ");
 			message = keyboard.nextLine().toUpperCase();
 			System.out.println("Please provide shift number: ");
 			shift = keyboard.nextInt();
@@ -28,6 +24,10 @@ public class Cipher {
 				System.out.println("i : " + i);
 				System.out.println("messasgeC[i]: " + messageC[i]);}
 
+			System.out.println("Would you like to [E]ncrypt");
+			System.out.println("Would you like to [D]encrypt");
+			System.out.println("Would you like to [Q]uit");
+			menu = keyboard.next().toUpperCase().charAt(0);
 			switch (menu){
 			case 'E':
 				encrypt(shift, messageC);

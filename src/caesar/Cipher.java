@@ -19,22 +19,29 @@ public class Cipher {
 		
 		
 		System.out.println("messasge: " + message);
-		for(int i =0; i < mesglength; i++){
-			messageC[i] = message.charAt(i);
+		
+		
+	}
+	
+	
+	
+	public static void encrypt(int shift, char messageC[]){
+		for(int i =0; i < messageC.length; i++){
 			System.out.println("i : " + i);
 			System.out.println("messasgeC[i]: " + messageC[i]);
 		}
 		
-		for(int i =0; i < mesglength; i++){
+		for(int i =0; i < messageC.length; i++){
 			if ((messageC[i] + shift) > ('Z')){
-				messageC[i] = (char)(shift - 25);
+				messageC[i] = (char)('Z' - messageC[i] + 'A');
 				System.out.println("New_messasgeC[i]: " + messageC[i]);
 				
 			}
 			else{
 				messageC[i] = (char)(messageC[i] + shift);
 			    System.out.println("New_messasgeC[i]: " + messageC[i]);
+			  
 		        }
-	}
-  }
-}
+	
+	
+}}}

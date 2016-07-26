@@ -37,4 +37,22 @@ public class Cipher {
 		        }
 	}
   }
+	
+	public static void decrypt(int shift, char messageC[]){
+		for(int i =0; i < messageC.length; i++){
+			System.out.println("i : " + i);
+			System.out.println("messasgeC[i]: " + messageC[i]);
+		}
+		
+		for(int i =0; i < messageC.length; i++){
+			if ((messageC[i] - shift) < ('A')){
+				messageC[i] = (char)('A' - messageC[i] + 'Z');
+				System.out.println("New_messasgeC[i]: " + messageC[i]);
+				
+			}
+			else{
+				messageC[i] = (char)(messageC[i] - shift);
+			    System.out.println("New_messasgeC[i]: " + messageC[i]);
+		        }
+	}
 }
